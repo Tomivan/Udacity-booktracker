@@ -21,7 +21,7 @@ class ChangeShelf extends Component {
 
 	render() {
 		return (
-			<div className={this.state.isUpdating ? 'book-shelf-changer loading' : 'book-shelf-changer'}>
+			<div className={this.state.isUpdating ? 'book-shelf-changer spinner-border spinner-border-sm' : 'book-shelf-changer'}>
 				<select value={this.props.book.shelf} onChange={event => this.changeShelf(event)}>
 					<option value="move" disabled>
 						Move to...
@@ -31,7 +31,7 @@ class ChangeShelf extends Component {
 					<option value="read">Read</option>
 					<option value="none">None</option>
 				</select>
-				{this.state.isUpdating && <div className="loader-two" />}
+				{this.state.isUpdating && <div className="spinner-border spinner-border-sm" />}
 			</div>
 		);
 	}
